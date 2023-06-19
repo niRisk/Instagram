@@ -7,8 +7,10 @@
         font-weight: bold;">Instagram</h1>
       </div>
       <ul *ngFor="let icon of leftPanelItems">
-        <li class="Menu-options" *ngIf="!icon.img"><span class="Menu-icon"><mat-icon>{{icon.icon}}</mat-icon></span>{{icon.title}}</li>
+        <div>
+        <li class="Menu-options" *ngIf="!icon.img"><span class="Menu-icon"><mat-icon class="icon-display" width="100">{{icon.icon}}</mat-icon></span>{{icon.title}}</li>
         <li class="Menu-options" *ngIf="icon.img"><span class="Menu-icon"><img src="{{icon.img}}" width='50' alt="User Avatar"></span>{{icon.title}}</li>
+      </div>
       </ul>
     </div>
     <div class="main-panel">

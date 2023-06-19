@@ -10,6 +10,7 @@
   /* background-color: #f5f6f7; */
   display: flex;
   padding: 0;
+  padding-left: 2px;
 }
 
 .header h1 {
@@ -60,6 +61,10 @@
 .post-header {
   display: flex;
   align-items: center;
+  padding-bottom: 1rem;
+}
+.icon-display {
+  transform: scale(1.5);
 }
 
 .post-header img {
@@ -130,11 +135,13 @@
   vertical-align: middle;
   border-radius: 50%;
   padding-top: 1rem;
+  margin: 1rem;
 }
 
 
 .Menu-options{
   margin-top: 2rem;
+
 }
 .Menu-icon{
   vertical-align: middle;
@@ -184,7 +191,7 @@
 }
 
 .right-panel {
-  width: 250px;
+  width: 500px;
   /* Swipeable behavior */
   overflow-y: auto;
 }
