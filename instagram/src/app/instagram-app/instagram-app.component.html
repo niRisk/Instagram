@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="content">
+    <div class="left-panel">
+      <div class="header">
+        <h1 style="font-family: 'Lobster', cursive;
+        font-size: 24px;
+        font-weight: bold;">Instagram</h1>
+      </div>
+      <ul *ngFor="let icon of leftPanelItems">
+        <li class="Menu-options" *ngIf="!icon.img"><span class="Menu-icon"><mat-icon>{{icon.icon}}</mat-icon></span>{{icon.title}}</li>
+        <li class="Menu-options" *ngIf="icon.img"><span class="Menu-icon"><img src="{{icon.img}}" width='50' alt="User Avatar"></span>{{icon.title}}</li>
+      </ul>
+    </div>
+    <div class="main-panel">
+      <div class="avatar-wrapper">
+      <div class="avatars" *ngFor="let a of Avatars">
+        <img src="{{a.img}}" width="{{a.width}}" alt="User Avatar">
+      </div>
+    </div>
+      <div class="post" *ngFor="let post of Posts">
+        <div class="post-header">
+          <img src="{{post.avatar}}" width='80' alt="User Avatar">
+          <span>{{post.userId}}</span>
+        </div>
+        <div class="post-image">
+          <img src="{{post.postImg}}" alt="Post Image">
+        </div>
+        <div class="post-footer">
+          <button>Like</button>
+          <button>Comment</button>
+          <button>Share</button>
+        </div>
+      </div>
+    </div>
+    <div class="right-panel">
+      <h3 style="color:#808080; padding-bottom: 1rem;">Suggested Users</h3>
+      <ul *ngFor="let avatars of suggestedUsers">
+        <li><span class="Avatars"><img src="{{avatars.img}}" width='60' alt="User Avatar"></span><span>{{avatars.title}}</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer">
+    <p>© 2023 Instagram. All rights reserved.</p>
+  </div>
+</div>
